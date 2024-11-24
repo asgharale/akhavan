@@ -28,15 +28,16 @@ INSTALLED_APPS = [
 
     # 3rd part
     'phonenumber_field',
-    'django_ckeditor_5',
     'django_jalali',
     'rest_framework',
+    'django_ckeditor_5',
 
     'mediastore.apps.MediastoreConfig',
     'user.apps.UserConfig',
     'sort.apps.SortConfig',
     'store.apps.StoreConfig',
-    'blog.apps.BlogConfig',
+    'order.apps.OrderConfig',
+    'blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
