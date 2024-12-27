@@ -131,6 +131,12 @@ DEFAULT_AUTO_FIELD: str = 'django.db.models.BigAutoField'
 # User Model
 AUTH_USER_MODEL: str = 'user.CUser'
 
+# REST FRAMEWORK
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',
+    'PAGE_SIZE': 100
+}
+
 # PHONE NUMBER
 PHONENUMBER_DEFAULT_REGION = 'IR'  # Replace 'US' with your desired country code
 PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'  # Options: 'NATIONAL', 'INTERNATIONAL', 'E164'

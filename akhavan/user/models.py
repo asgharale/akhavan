@@ -27,10 +27,12 @@ class CUserManager(BaseUserManager):
 		return user
 
 class CUser(AbstractBaseUser, PermissionsMixin):
-	email = models.EmailField(unique=True, max_length=255, blank=True, null=False)
 	phone_num = PhoneNumberField(unique=True, blank=False, null=False)
+	email = models.EmailField(unique=True, max_length=255, blank=True, null=False)
 	first_name = models.CharField(max_length=255)
 	last_name = models.CharField(max_length=255)
+	biography = models.TextField(blank=True, max_length=400, null=True)
+	profile_pic = models.ImageField(upload_to="users/prof/%Y-%m/", blank=True, null=True)
 	is_active = models.BooleanField(default=True)
 	is_staff = models.BooleanField(default=False)
 	is_admin = models.BooleanField(default=False)

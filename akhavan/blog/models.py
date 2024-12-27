@@ -38,7 +38,7 @@ class Article(models.Model):
     def views_count(self):
         return self.views.count()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "%s - %s" % (self.title, self.address)
     class Meta:
         ordering = ('last_modified',)
@@ -66,5 +66,5 @@ class Comment(models.Model):
     objects = models.Manager()
     published = PublishedManager()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "%s - %s - %s" % (self.article.title, self.full_name, self.email)
