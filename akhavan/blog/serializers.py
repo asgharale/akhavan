@@ -5,8 +5,8 @@ from user.serializers import SuperUserListSerializer
 
 class ArticleListSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=255, allow_null=False)
-    address = serializers.SlugField(max_length=255, unique=True, allow_null=False)
-    meta = serializers.TextField(max_length=400, allow_null=False)
+    address = serializers.SlugField(max_length=255, allow_null=False)
+    meta = serializers.CharField(max_length=400, allow_null=False)
     thumbnail = serializers.ImageField()
     likes_count = serializers.IntegerField()
     views_count = serializers.IntegerField()

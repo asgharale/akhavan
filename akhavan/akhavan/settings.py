@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django_jalali',
     'rest_framework',
     'django_ckeditor_5',
+    'django_filters',
 
     'mediastore.apps.MediastoreConfig',
     'user.apps.UserConfig',
@@ -131,10 +132,15 @@ DEFAULT_AUTO_FIELD: str = 'django.db.models.BigAutoField'
 # User Model
 AUTH_USER_MODEL: str = 'user.CUser'
 
-# REST FRAMEWORK
+# # REST FRAMEWORK
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',
+#     'PAGE_SIZE': 100
+# }
+# DRF
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',
-    'PAGE_SIZE': 100
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 # PHONE NUMBER
